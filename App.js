@@ -1,8 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+import React from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from './src/screens/HomeScreen';
+import ShoppingApp from './src/screen/ShoppingApp';
+import HomeScreen from "./src/screen/HomeScreen";
+import RecipeDetailScreen from "./src/screen/RecipeDetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -14,6 +16,11 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={{ title: "HomeScreen" }}
+        />
+        <Stack.Screen
+          name="RecipeDetail"
+          component={RecipeDetailScreen}
+          options={{ title: "RecipeDetailScreen" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -29,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+  export default App;
